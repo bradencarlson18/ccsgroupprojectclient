@@ -272,6 +272,7 @@ function handleOnClickReturn(transactionID, itemID, condition){
     updateTransactionTable(transactionID);
     updateInventoryItemComments(itemID, condition);
     subtractNoOfItemsCheckedOut();
+    successfulTransactionReturn();
 }
 
 function displayEmployeeTransactions(){
@@ -303,7 +304,8 @@ function displayEmployeeTransactions(){
 
 function successfulTransactionReturn()
 {
-    let html = "<h4> Item succesfully returned!<b> Thank You! </h4>";
+    let html = "<h4> Item succesfully returned! Thank You! </h4>";
     document.getElementById("successfulreturn").innerHTML = html;
+    console
     checkEmployeeEligibility();
 }
