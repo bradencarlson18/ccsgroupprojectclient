@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCS Reports</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel ="stylesheet" href="./resources/css/reports.css">
+</head>
+<body style="background-color: rgb(209, 203, 203);">
+    <script type="text/Javascript" src="./resources/scripts/report.js"></script>
+    <!--Nav Bar-->
+    <nav class="navbar navbar-inverse navbar-fixed-top  ">
+        <div class="container text-center">
+            <ul>
+                <img src="resources/images/transaction.png" id="transaction" />
+                <li class "a" li id="newtransaction"><a href="./transaction.html">New Transaction</a></li>
+                <img src="resources/images/report2.png" id="report" />
+                <li class "a"><a href="./reports.html">Reports</a></li>
+                <img src="resources/images/admin.png" id="admin" />
+                <li class "a"><a href="./admin.html">Admins</a></li>
+                <img src="resources/images/logout.png" id="logout" />
+                <li class "a"><a href="./home.html">Logout</a></li>
+            </ul>
+        </div>  
+    </nav>
+
+    <div class="jumbotron text-center">
+        <h1 class="display-4" id="jumbotrontext">Reports</h1>
+        <p>Please select the report you would like to view</p>
+    </div>
+
+
+    <div class="container">
+        <div class ="row">
+            
+
+            <div class="col-xs-4" id="headerwithborder">
+                <h1>Select Report</h1>
+            
+                    <label for="report">Choose a report:</label><br>
+                
+                     
+                      <button class ="btn-primary"  id="Overdue"onclick="getReport('Overdue')" style = color:white !important;>Overdue Items</button><br>
+                      <br>
+                      <button class ="btn-primary" id="Lost" onclick="getReport('Lost')"style = color:white !important;>Lost Items</button><br>
+                      <br>
+                      <button class ="btn-primary" id="Damaged" onclick="getReport('Damaged')"style = color:white !important;>Damaged Items</button><br>
+                      <br>
+                      <button class ="btn-primary" id="Newest" onclick="getReport('Newest')"style = color:white !important;>Newest First</button><br>
+                      <br>
+                      <button class ="btn-primary" id="Oldest" onclick="getReport('Oldest')"style = color:white !important;>Oldest First</button><br>
+              
+                    <br><br>
+                   
+                  <!-- <input type="submit" value="Submit" style = color:black !important;> -->
+      
+            </div>
+            <div class = "col-xs-4" id="headerwithborder">
+                <h1>Report Table</h1>
+                <div id ="reportTable">
+                    
+                </div>
+    
+            </div>
+
+           
+ 
+
+        </div>
+    
+    </div>
+    
+</body>
+</html>
